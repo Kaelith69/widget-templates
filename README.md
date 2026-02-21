@@ -4,12 +4,26 @@ A collection of animated, terminal-style SVG widgets designed to spice up your G
 
 ## Available Widgets
 
+### Terminal-Style Widgets (Dark Theme)
 - **`existential.svg`**: A matrix-style falling text animation with an existential crisis theme.
 - **`github-stats.svg`**: A terminal window displaying mock GitHub statistics.
 - **`joke.svg`**: A terminal window fetching and displaying a programming joke.
 - **`rain.svg`**: A terminal window with a soothing ASCII rain animation.
 - **`skills.svg`**: A terminal window displaying a "skill issue" progress bar chart.
 - **`status.svg`**: A terminal window displaying a current status or activity.
+
+### Code Editor Widget
+- **`code-editor.svg`**: A VS Code-style editor window with syntax-highlighted Python code and a blinking cursor.
+
+### File Explorer Widget
+- **`file-explorer.svg`**: A macOS Finder-style file explorer with light theme and sliding animations.
+
+### Git Widget
+- **`commit-history.svg`**: A GitHub-style commit history graph with branch visualization.
+
+### Utility Widgets
+- **`weather.svg`**: A weather widget with animated sun, clouds, and weather information.
+- **`music-player.svg`**: A Spotify-style music player with animated equalizer bars and playback controls.
 
 ## How to Use
 
@@ -60,3 +74,11 @@ Change `kaelith69` to your own GitHub username:
 <text x="16" y="48" class="mono row r1" font-size="11" fill="#484f58">$ ./fetch_stats.sh --user yourusername</text>
 ```
 Save the file, and the widget will now display your username!
+
+## Tips for Best Results
+
+- **File Size:** These SVGs are optimized and typically under 10KB each.
+- **Browser Compatibility:** All modern browsers support SVG animations.
+- **Performance:** Animations are CSS-based and won't impact page performance.
+- **Accessibility:** Add appropriate `alt` text when embedding in HTML.
+- **Responsiveness:** Use CSS `max-width: 100%` for responsive behavior.

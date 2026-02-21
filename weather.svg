@@ -1,0 +1,52 @@
+<svg viewBox="0 0 350 200" xmlns="http://www.w3.org/2000/svg" width="350" height="200">
+  <defs>
+    <style>
+      .mono { font-family: 'Courier New', monospace; }
+      .weather { animation: weatherin 1s ease-out both; opacity: 0; }
+      .w1{animation-delay:0.2s} .w2{animation-delay:0.4s} .w3{animation-delay:0.6s}
+      .w4{animation-delay:0.8s} .w5{animation-delay:1.0s}
+      @keyframes weatherin { to { opacity: 1; } }
+      .sun { animation: rotate 10s linear infinite; transform-origin: center; }
+      @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      .cloud { animation: float 3s ease-in-out infinite; }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    </style>
+  </defs>
+
+  <rect width="350" height="200" rx="15" fill="linear-gradient(135deg, #87ceeb, #98d8e8)"/>
+  <rect x="1" y="1" width="348" height="198" rx="14" fill="none" stroke="#4a90e2"/>
+
+  <!-- Sun -->
+  <g class="sun">
+    <circle cx="280" cy="50" r="25" fill="#ffd700"/>
+    <line x1="280" y1="25" x2="280" y2="15" stroke="#ffd700" stroke-width="2"/>
+    <line x1="280" y1="75" x2="280" y2="85" stroke="#ffd700" stroke-width="2"/>
+    <line x1="255" y1="50" x2="245" y2="50" stroke="#ffd700" stroke-width="2"/>
+    <line x1="305" y1="50" x2="315" y2="50" stroke="#ffd700" stroke-width="2"/>
+    <line x1="265" y1="35" x2="258" y2="28" stroke="#ffd700" stroke-width="2"/>
+    <line x1="295" y1="65" x2="302" y2="72" stroke="#ffd700" stroke-width="2"/>
+    <line x1="265" y1="65" x2="258" y2="72" stroke="#ffd700" stroke-width="2"/>
+    <line x1="295" y1="35" x2="302" y2="28" stroke="#ffd700" stroke-width="2"/>
+  </g>
+
+  <!-- Cloud -->
+  <g class="cloud weather w1">
+    <ellipse cx="80" cy="120" rx="30" ry="20" fill="#ffffff"/>
+    <ellipse cx="110" cy="120" rx="35" ry="25" fill="#ffffff"/>
+    <ellipse cx="140" cy="120" rx="30" ry="20" fill="#ffffff"/>
+  </g>
+
+  <!-- Weather info -->
+  <text x="175" y="60" text-anchor="middle" class="mono weather w2" font-size="24" fill="#ffffff" font-weight="bold">72°F</text>
+  <text x="175" y="85" text-anchor="middle" class="mono weather w3" font-size="14" fill="#ffffff">Sunny</text>
+  <text x="175" y="105" text-anchor="middle" class="mono weather w4" font-size="12" fill="#ffffff">New York, NY</text>
+  <text x="175" y="125" text-anchor="middle" class="mono weather w5" font-size="10" fill="#ffffff">Feels like 75°F</text>
+
+  <!-- Additional info -->
+  <text x="30" y="160" class="mono weather w1" font-size="10" fill="#ffffff">Humidity: 45%</text>
+  <text x="30" y="175" class="mono weather w2" font-size="10" fill="#ffffff">Wind: 5 mph</text>
+  <text x="30" y="190" class="mono weather w3" font-size="10" fill="#ffffff">UV Index: 6</text>
+
+  <text x="250" y="160" text-anchor="end" class="mono weather w4" font-size="10" fill="#ffffff">H: 78°F</text>
+  <text x="250" y="175" text-anchor="end" class="mono weather w5" font-size="10" fill="#ffffff">L: 65°F</text>
+</svg>
