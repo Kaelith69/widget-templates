@@ -1,0 +1,151 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" width="400" height="300">
+  <defs>
+    <style>
+      .mono { font-family: 'Courier New', monospace; }
+      .calendar { animation: calendarin 0.8s ease-out both; opacity: 0; }
+      .c1{animation-delay:0.1s} .c2{animation-delay:0.2s} .c3{animation-delay:0.3s}
+      .c4{animation-delay:0.4s} .c5{animation-delay:0.5s} .c6{animation-delay:0.6s}
+      .c7{animation-delay:0.7s}
+      @keyframes calendarin { to { opacity: 1; } }
+      .today { fill: #0366d6; animation: pulse 2s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+    </style>
+  </defs>
+
+  <rect width="400" height="300" rx="10" fill="#ffffff"/>
+  <rect x="1" y="1" width="398" height="298" rx="9" fill="none" stroke="#e1e4e8"/>
+
+  <!-- Header -->
+  <rect width="400" height="50" rx="10" fill="#f6f8fa"/>
+  <text x="200" y="30" text-anchor="middle" class="mono calendar c1" font-size="18" fill="#24292e" font-weight="bold">February 2026</text>
+
+  <!-- Day headers -->
+  <text x="50" y="70" text-anchor="middle" class="mono calendar c2" font-size="12" fill="#586069">Sun</text>
+  <text x="100" y="70" text-anchor="middle" class="mono calendar c2" font-size="12" fill="#586069">Mon</text>
+  <text x="150" y="70" text-anchor="middle" class="mono calendar c2" font-size="12" fill="#586069">Tue</text>
+  <text x="200" y="70" text-anchor="middle" class="mono calendar c2" font-size="12" fill="#586069">Wed</text>
+  <text x="250" y="70" text-anchor="middle" class="mono calendar c2" font-size="12" fill="#586069">Thu</text>
+  <text x="300" y="70" text-anchor="middle" class="mono calendar c2" font-size="12" fill="#586069">Fri</text>
+  <text x="350" y="70" text-anchor="middle" class="mono calendar c2" font-size="12" fill="#586069">Sat</text>
+
+  <!-- Calendar grid -->
+  <g class="calendar c3">
+    <!-- Week 1 -->
+    <circle cx="50" cy="100" r="15" fill="#f6f8fa"/>
+    <text x="50" y="105" text-anchor="middle" class="mono" font-size="12" fill="#8b949e">26</text>
+
+    <circle cx="100" cy="100" r="15" fill="#f6f8fa"/>
+    <text x="100" y="105" text-anchor="middle" class="mono" font-size="12" fill="#8b949e">27</text>
+
+    <circle cx="150" cy="100" r="15" fill="#f6f8fa"/>
+    <text x="150" y="105" text-anchor="middle" class="mono" font-size="12" fill="#8b949e">28</text>
+
+    <circle cx="200" cy="100" r="15" fill="#f6f8fa"/>
+    <text x="200" y="105" text-anchor="middle" class="mono" font-size="12" fill="#8b949e">29</text>
+
+    <circle cx="250" cy="100" r="15" fill="#f6f8fa"/>
+    <text x="250" y="105" text-anchor="middle" class="mono" font-size="12" fill="#8b949e">30</text>
+
+    <circle cx="300" cy="100" r="15" fill="#f6f8fa"/>
+    <text x="300" y="105" text-anchor="middle" class="mono" font-size="12" fill="#8b949e">31</text>
+
+    <circle cx="350" cy="100" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="350" y="105" text-anchor="middle" class="mono" font-size="12" fill="#24292e">1</text>
+  </g>
+
+  <!-- Week 2 -->
+  <g class="calendar c4">
+    <circle cx="50" cy="140" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="50" y="145" text-anchor="middle" class="mono" font-size="12" fill="#24292e">2</text>
+
+    <circle cx="100" cy="140" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="100" y="145" text-anchor="middle" class="mono" font-size="12" fill="#24292e">3</text>
+
+    <circle cx="150" cy="140" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="150" y="145" text-anchor="middle" class="mono" font-size="12" fill="#24292e">4</text>
+
+    <circle cx="200" cy="140" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="200" y="145" text-anchor="middle" class="mono" font-size="12" fill="#24292e">5</text>
+
+    <circle cx="250" cy="140" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="250" y="145" text-anchor="middle" class="mono" font-size="12" fill="#24292e">6</text>
+
+    <circle cx="300" cy="140" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="300" y="145" text-anchor="middle" class="mono" font-size="12" fill="#24292e">7</text>
+
+    <circle cx="350" cy="140" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="350" y="145" text-anchor="middle" class="mono" font-size="12" fill="#24292e">8</text>
+  </g>
+
+  <!-- Week 3 -->
+  <g class="calendar c5">
+    <circle cx="50" cy="180" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="50" y="185" text-anchor="middle" class="mono" font-size="12" fill="#24292e">9</text>
+
+    <circle cx="100" cy="180" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="100" y="185" text-anchor="middle" class="mono" font-size="12" fill="#24292e">10</text>
+
+    <circle cx="150" cy="180" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="150" y="185" text-anchor="middle" class="mono" font-size="12" fill="#24292e">11</text>
+
+    <circle cx="200" cy="180" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="200" y="185" text-anchor="middle" class="mono" font-size="12" fill="#24292e">12</text>
+
+    <circle cx="250" cy="180" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="250" y="185" text-anchor="middle" class="mono" font-size="12" fill="#24292e">13</text>
+
+    <circle cx="300" cy="180" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="300" y="185" text-anchor="middle" class="mono" font-size="12" fill="#24292e">14</text>
+
+    <circle cx="350" cy="180" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="350" y="185" text-anchor="middle" class="mono" font-size="12" fill="#24292e">15</text>
+  </g>
+
+  <!-- Week 4 -->
+  <g class="calendar c6">
+    <circle cx="50" cy="220" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="50" y="225" text-anchor="middle" class="mono" font-size="12" fill="#24292e">16</text>
+
+    <circle cx="100" cy="220" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="100" y="225" text-anchor="middle" class="mono" font-size="12" fill="#24292e">17</text>
+
+    <circle cx="150" cy="220" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="150" y="225" text-anchor="middle" class="mono" font-size="12" fill="#24292e">18</text>
+
+    <circle cx="200" cy="220" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="200" y="225" text-anchor="middle" class="mono" font-size="12" fill="#24292e">19</text>
+
+    <circle cx="250" cy="220" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="250" y="225" text-anchor="middle" class="mono" font-size="12" fill="#24292e">20</text>
+
+    <circle cx="300" cy="220" r="15" class="today"/>
+    <text x="300" y="225" text-anchor="middle" class="mono" font-size="12" fill="#ffffff" font-weight="bold">21</text>
+
+    <circle cx="350" cy="220" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="350" y="225" text-anchor="middle" class="mono" font-size="12" fill="#24292e">22</text>
+  </g>
+
+  <!-- Week 5 -->
+  <g class="calendar c7">
+    <circle cx="50" cy="260" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="50" y="265" text-anchor="middle" class="mono" font-size="12" fill="#24292e">23</text>
+
+    <circle cx="100" cy="260" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="100" y="265" text-anchor="middle" class="mono" font-size="12" fill="#24292e">24</text>
+
+    <circle cx="150" cy="260" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="150" y="265" text-anchor="middle" class="mono" font-size="12" fill="#24292e">25</text>
+
+    <circle cx="200" cy="260" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="200" y="265" text-anchor="middle" class="mono" font-size="12" fill="#24292e">26</text>
+
+    <circle cx="250" cy="260" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="250" y="265" text-anchor="middle" class="mono" font-size="12" fill="#24292e">27</text>
+
+    <circle cx="300" cy="260" r="15" fill="#ffffff" stroke="#e1e4e8"/>
+    <text x="300" y="265" text-anchor="middle" class="mono" font-size="12" fill="#24292e">28</text>
+
+    <circle cx="350" cy="260" r="15" fill="#f6f8fa"/>
+    <text x="350" y="265" text-anchor="middle" class="mono" font-size="12" fill="#8b949e">1</text>
+  </g>
+</svg>

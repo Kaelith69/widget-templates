@@ -1,0 +1,55 @@
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" width="600" height="200">
+  <defs>
+    <style>
+      .mono { font-family: 'Courier New', monospace; }
+      .quote { animation: quotein 1s ease-out both; opacity: 0; }
+      .q1{animation-delay:0.2s} .q2{animation-delay:0.5s} .q3{animation-delay:0.8s}
+      @keyframes quotein { to { opacity: 1; } }
+      .sparkle { animation: sparkle 2s ease-in-out infinite; }
+      .sp1{animation-delay:0s} .sp2{animation-delay:0.5s} .sp3{animation-delay:1s}
+      @keyframes sparkle { 0%,100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } }
+    </style>
+  </defs>
+
+  <rect width="600" height="200" rx="15" fill="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"/>
+  <rect x="1" y="1" width="598" height="198" rx="14" fill="none" stroke="#ffffff" opacity="0.2"/>
+
+  <!-- Decorative sparkles -->
+  <g class="sparkle sp1">
+    <circle cx="50" cy="40" r="3" fill="#ffffff"/>
+    <circle cx="48" cy="38" r="1" fill="#ffffff"/>
+  </g>
+  <g class="sparkle sp2">
+    <circle cx="550" cy="30" r="2" fill="#ffffff"/>
+    <circle cx="548" cy="28" r="1" fill="#ffffff"/>
+  </g>
+  <g class="sparkle sp3">
+    <circle cx="570" cy="160" r="3" fill="#ffffff"/>
+    <circle cx="568" cy="158" r="1" fill="#ffffff"/>
+  </g>
+
+  <!-- Quote marks -->
+  <text x="30" y="60" class="mono quote q1" font-size="60" fill="#ffffff" opacity="0.3">"</text>
+  <text x="540" y="140" class="mono quote q3" font-size="60" fill="#ffffff" opacity="0.3">"</text>
+
+  <!-- Main quote -->
+  <text x="300" y="80" text-anchor="middle" class="mono quote q2" font-size="18" fill="#ffffff" font-weight="bold">
+    The only way to do great work is to love what you do.
+  </text>
+
+  <!-- Author -->
+  <text x="300" y="110" text-anchor="middle" class="mono quote q2" font-size="14" fill="#ffffff" opacity="0.8">
+    — Steve Jobs
+  </text>
+
+  <!-- Inspirational elements -->
+  <circle cx="100" cy="150" r="8" fill="#ffffff" opacity="0.4"/>
+  <circle cx="120" cy="140" r="5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="140" cy="155" r="6" fill="#ffffff" opacity="0.5"/>
+  <circle cx="160" cy="145" r="4" fill="#ffffff" opacity="0.7"/>
+
+  <circle cx="440" cy="150" r="7" fill="#ffffff" opacity="0.5"/>
+  <circle cx="460" cy="140" r="6" fill="#ffffff" opacity="0.6"/>
+  <circle cx="480" cy="155" r="5" fill="#ffffff" opacity="0.4"/>
+  <circle cx="500" cy="145" r="8" fill="#ffffff" opacity="0.3"/>
+</svg>

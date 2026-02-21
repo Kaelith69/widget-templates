@@ -10,70 +10,88 @@ I'm a passionate developer who loves creating beautiful and functional applicati
 - 📫 How to reach me: [your-email@example.com]
 - ⚡ Fun fact: I love coding while listening to music!
 
-## 📊 GitHub Stats
+## 📊 GitHub Stats & Activity
 
 <p align="center">
-  <img src="./github-stats.svg" alt="GitHub Stats" width="100%" />
+  <img src="./github-stats.svg" alt="GitHub Stats" width="49%" />
+  <img src="./contribution-graph.svg" alt="Contribution Graph" width="49%" />
 </p>
 
-## 💻 Coding Activity
+## 💻 Coding Environment
 
 <p align="center">
   <img src="./code-editor.svg" alt="Code Editor" width="100%" />
 </p>
 
-## 📁 My Projects
+## 📁 My Projects & Files
 
 <p align="center">
   <img src="./file-explorer.svg" alt="File Explorer" width="60%" />
 </p>
 
-## 🔄 Recent Commits
+## 🔄 Recent Activity
 
 <p align="center">
   <img src="./commit-history.svg" alt="Commit History" width="100%" />
 </p>
 
-## 🎵 Currently Listening
+## 🎵 Currently Listening & Weather
 
 <p align="center">
-  <img src="./music-player.svg" alt="Music Player" width="80%" />
+  <img src="./music-player.svg" alt="Music Player" width="49%" />
+  <img src="./weather.svg" alt="Weather" width="49%" />
 </p>
 
-## 🌤️ Today's Weather
+## 📅 Schedule & Time Zones
 
 <p align="center">
-  <img src="./weather.svg" alt="Weather" width="70%" />
+  <img src="./calendar.svg" alt="Calendar" width="49%" />
+  <img src="./time-zones.svg" alt="Time Zones" width="49%" />
 </p>
 
-## 🎯 Skills & Expertise
+## 🔧 System & Network
+
+<p align="center">
+  <img src="./system-monitor.svg" alt="System Monitor" width="49%" />
+  <img src="./network-activity.svg" alt="Network Activity" width="49%" />
+</p>
+
+## 📈 Progress & Social
+
+<p align="center">
+  <img src="./progress-tracker.svg" alt="Progress Tracker" width="49%" />
+  <img src="./social-stats.svg" alt="Social Stats" width="49%" />
+</p>
+
+## 🎯 Skills & Status
 
 <p align="center">
   <img src="./skills.svg" alt="Skills" width="60%" />
 </p>
 
-## 🤔 Deep Thoughts
-
-<p align="center">
-  <img src="./existential.svg" alt="Existential" width="100%" />
-</p>
-
-## 📈 Current Status
+## 🤔 Current Status
 
 <p align="center">
   <img src="./status.svg" alt="Status" width="100%" />
 </p>
 
-## 😄 Random Joke
+## 💭 Inspiration
 
 <p align="center">
-  <img src="./joke.svg" alt="Joke" width="100%" />
+  <img src="./inspiration-quote.svg" alt="Inspiration" width="100%" />
 </p>
 
-## 🌧️ Relaxing Rain
+## 😄 Fun Stuff
 
 <p align="center">
-  <img src="./rain.svg" alt="Rain" width="100%" />
+  <img src="./joke.svg" alt="Joke" width="49%" />
+  <img src="./rain.svg" alt="Rain" width="49%" />
+</p>
+
+## 🤯 Deep Thoughts
+
+<p align="center">
+  <img src="./existential.svg" alt="Existential" width="100%" />
 </p>
 
 ## 🛠️ Technologies & Tools

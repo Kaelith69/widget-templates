@@ -1,0 +1,66 @@
+<svg viewBox="0 0 550 180" xmlns="http://www.w3.org/2000/svg" width="550" height="180">
+  <defs>
+    <style>
+      .mono { font-family: 'Courier New', monospace; }
+      .social { animation: socialin 0.6s ease-out both; opacity: 0; }
+      .so1{animation-delay:0.1s} .so2{animation-delay:0.2s} .so3{animation-delay:0.3s}
+      .so4{animation-delay:0.4s} .so5{animation-delay:0.5s}
+      @keyframes socialin { to { opacity: 1; } }
+      .count { animation: countup 1.5s ease-out both; }
+      .co1{animation-delay:0.6s} .co2{animation-delay:0.8s} .co3{animation-delay:1.0s}
+      .co4{animation-delay:1.2s}
+      @keyframes countup { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
+      .trend { animation: trend 2s ease-in-out infinite; }
+      @keyframes trend { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    </style>
+  </defs>
+
+  <rect width="550" height="180" rx="12" fill="#f8f9fa"/>
+  <rect x="1" y="1" width="548" height="178" rx="11" fill="none" stroke="#dee2e6"/>
+
+  <!-- Title -->
+  <text x="275" y="25" text-anchor="middle" class="mono social so1" font-size="16" fill="#495057" font-weight="bold">Social Media Stats</text>
+
+  <!-- GitHub -->
+  <g class="social so2">
+    <circle cx="80" cy="70" r="25" fill="#24292e"/>
+    <text x="80" y="77" text-anchor="middle" class="mono" font-size="16" fill="#ffffff">🐙</text>
+    <text x="80" y="105" text-anchor="middle" class="mono count co1" font-size="18" fill="#24292e" font-weight="bold">1.2K</text>
+    <text x="80" y="120" text-anchor="middle" class="mono" font-size="10" fill="#6c757d">Followers</text>
+    <text x="80" y="135" text-anchor="middle" class="mono trend" font-size="12" fill="#28a745">↗ +12%</text>
+  </g>
+
+  <!-- Twitter -->
+  <g class="social so3">
+    <circle cx="180" cy="70" r="25" fill="#1da1f2"/>
+    <text x="180" y="77" text-anchor="middle" class="mono" font-size="16" fill="#ffffff">🐦</text>
+    <text x="180" y="105" text-anchor="middle" class="mono count co2" font-size="18" fill="#24292e" font-weight="bold">856</text>
+    <text x="180" y="120" text-anchor="middle" class="mono" font-size="10" fill="#6c757d">Followers</text>
+    <text x="180" y="135" text-anchor="middle" class="mono trend" font-size="12" fill="#28a745">↗ +8%</text>
+  </g>
+
+  <!-- LinkedIn -->
+  <g class="social so4">
+    <circle cx="280" cy="70" r="25" fill="#0077b5"/>
+    <text x="280" y="77" text-anchor="middle" class="mono" font-size="16" fill="#ffffff">💼</text>
+    <text x="280" y="105" text-anchor="middle" class="mono count co3" font-size="18" fill="#24292e" font-weight="bold">432</text>
+    <text x="280" y="120" text-anchor="middle" class="mono" font-size="10" fill="#6c757d">Connections</text>
+    <text x="280" y="135" text-anchor="middle" class="mono trend" font-size="12" fill="#28a745">↗ +15%</text>
+  </g>
+
+  <!-- YouTube -->
+  <g class="social so5">
+    <circle cx="380" cy="70" r="25" fill="#ff0000"/>
+    <text x="380" y="77" text-anchor="middle" class="mono" font-size="16" fill="#ffffff">📺</text>
+    <text x="380" y="105" text-anchor="middle" class="mono count co4" font-size="18" fill="#24292e" font-weight="bold">3.1K</text>
+    <text x="380" y="120" text-anchor="middle" class="mono" font-size="10" fill="#6c757d">Subscribers</text>
+    <text x="380" y="135" text-anchor="middle" class="mono trend" font-size="12" fill="#dc3545">↘ -3%</text>
+  </g>
+
+  <!-- Total Reach -->
+  <rect x="450" y="50" width="80" height="100" rx="8" fill="#e9ecef"/>
+  <text x="490" y="75" text-anchor="middle" class="mono social so1" font-size="12" fill="#495057">Total Reach</text>
+  <text x="490" y="95" text-anchor="middle" class="mono count co1" font-size="16" fill="#24292e" font-weight="bold">8.4K</text>
+  <text x="490" y="110" text-anchor="middle" class="mono" font-size="10" fill="#6c757d">This Month</text>
+  <text x="490" y="130" text-anchor="middle" class="mono trend" font-size="12" fill="#28a745">↗ +22%</text>
+</svg>

@@ -18,12 +18,22 @@ A collection of animated, terminal-style SVG widgets designed to spice up your G
 ### File Explorer Widget
 - **`file-explorer.svg`**: A macOS Finder-style file explorer with light theme and sliding animations.
 
-### Git Widget
+### Git Widgets
 - **`commit-history.svg`**: A GitHub-style commit history graph with branch visualization.
+- **`contribution-graph.svg`**: A GitHub-style contribution graph showing coding activity over time.
 
 ### Utility Widgets
 - **`weather.svg`**: A weather widget with animated sun, clouds, and weather information.
 - **`music-player.svg`**: A Spotify-style music player with animated equalizer bars and playback controls.
+- **`calendar.svg`**: A monthly calendar widget with today's date highlighted.
+- **`system-monitor.svg`**: A system monitoring widget showing CPU, RAM, disk usage, and network activity.
+- **`time-zones.svg`**: A world clock widget displaying current time in different time zones.
+- **`network-activity.svg`**: A network topology visualization with animated data packets.
+
+### Social & Progress Widgets
+- **`social-stats.svg`**: Social media statistics widget with follower counts and growth trends.
+- **`progress-tracker.svg`**: Project progress tracker with animated progress bars and completion checkmarks.
+- **`inspiration-quote.svg`**: Inspirational quote widget with animated sparkles and gradient background.
 
 ## How to Use
 
@@ -55,25 +65,92 @@ You can use these SVGs in your HTML projects just like any other image.
 
 Alternatively, you can embed the SVG code directly into your HTML if you want to manipulate it further with CSS or JavaScript.
 
-## Customization
+### 3. Setup Instructions
 
-These widgets are plain SVG files, which means you can easily customize them by opening the files in any text editor (like VS Code).
+#### Step 1: Choose Your Widgets
+1. Browse the available widgets above and select the ones that fit your style
+2. Consider the theme (dark/light) and animation style that matches your profile
+3. Think about the information you want to display (stats, activities, utilities, etc.)
 
-1. **Change Text:** Look for `<text>` tags to modify the displayed text. For example, in `github-stats.svg`, you can change the username, repository count, or top languages to match your actual stats.
-2. **Change Colors:** Look for `fill="#..."` attributes to change the colors of text, progress bars, or the terminal background. The default colors are based on the GitHub Dark theme.
-3. **Adjust Animations:** The animations are controlled by CSS within the `<style>` tag at the top of each SVG file. You can tweak the `@keyframes`, `animation-delay`, and `animation-duration` to your liking.
+#### Step 2: Upload to Repository
+1. Create a new repository on GitHub (or use an existing one)
+2. Upload the selected SVG files to your repository
+3. Make sure the files are in the root directory or a dedicated folder
 
-## Example: Customizing `github-stats.svg`
+#### Step 3: Update Your README
+1. Open your profile README.md file (create one if it doesn't exist)
+2. Add the widget images using the markdown or HTML syntax shown above
+3. Use `<p align="center">` tags for centered alignment
+4. Adjust width percentages for responsive sizing (e.g., `width="80%"` for smaller widgets)
 
-Open `github-stats.svg` in your editor and find this line:
+#### Step 4: Customize (Optional)
+1. Open any SVG file in a text editor (VS Code recommended)
+2. Look for `<text>` elements to change displayed text
+3. Modify `fill="#..."` attributes to change colors
+4. Adjust animation timings in the `<style>` section
+5. Save and commit your changes
+
+#### Step 5: Preview and Publish
+1. Commit your changes and push to GitHub
+2. Visit your profile to see the widgets in action
+3. Make adjustments as needed for optimal display
+
+## Customization Guide
+
+### Text Customization
+Most widgets contain customizable text. Look for `<text>` tags:
 ```xml
-<text x="16" y="48" class="mono row r1" font-size="11" fill="#484f58">$ ./fetch_stats.sh --user kaelith69</text>
+<text x="16" y="48">Your Custom Text Here</text>
 ```
-Change `kaelith69` to your own GitHub username:
+
+### Color Customization
+Change colors by modifying `fill` attributes:
 ```xml
-<text x="16" y="48" class="mono row r1" font-size="11" fill="#484f58">$ ./fetch_stats.sh --user yourusername</text>
+<!-- Change text color -->
+<text fill="#ff0000">Red Text</text>
+
+<!-- Change background color -->
+<rect fill="#000000">Black Background</rect>
 ```
-Save the file, and the widget will now display your username!
+
+### Animation Customization
+Modify CSS animations in the `<style>` section:
+```css
+.my-animation {
+  animation-duration: 2s;  /* Change speed */
+  animation-delay: 0.5s;  /* Change delay */
+}
+```
+
+### Size Customization
+Adjust the `viewBox` and dimensions:
+```xml
+<svg viewBox="0 0 400 200" width="400" height="200">
+```
+
+## Widget Categories & Use Cases
+
+### For Developers
+- `code-editor.svg` - Show your coding environment
+- `commit-history.svg` - Display recent Git activity
+- `contribution-graph.svg` - Showcase coding consistency
+- `system-monitor.svg` - Demonstrate technical skills
+
+### For Productivity
+- `calendar.svg` - Show current date and planning
+- `progress-tracker.svg` - Track project milestones
+- `time-zones.svg` - Display global collaboration
+
+### For Personal Branding
+- `github-stats.svg` - Highlight GitHub metrics
+- `social-stats.svg` - Show social media presence
+- `inspiration-quote.svg` - Share motivational content
+
+### For Fun & Engagement
+- `music-player.svg` - Show current listening
+- `weather.svg` - Display local weather
+- `joke.svg` - Add humor to your profile
+- `existential.svg` - Add personality
 
 ## Tips for Best Results
 
@@ -82,3 +159,10 @@ Save the file, and the widget will now display your username!
 - **Performance:** Animations are CSS-based and won't impact page performance.
 - **Accessibility:** Add appropriate `alt` text when embedding in HTML.
 - **Responsiveness:** Use CSS `max-width: 100%` for responsive behavior.
+- **Loading:** GitHub may cache images; use `?v=1` parameter to force refresh during development.
+- **Organization:** Group related widgets together in your README layout.
+- **Balance:** Mix static information with animated widgets for visual interest.
+
+## Example Profile README
+
+Check out [`example-profile-README.md`](example-profile-README.md) for a complete example of how to integrate these widgets into your GitHub profile README. It demonstrates proper placement, sizing, and organization of multiple widgets.
