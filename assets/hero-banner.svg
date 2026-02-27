@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 200" width="820" height="200">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F59E0B"/>
+      <stop offset="50%" style="stop-color:#2563EB"/>
+      <stop offset="100%" style="stop-color:#10B981"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+      @keyframes slideIn { from{opacity:0;transform:translateX(-20px)} to{opacity:1;transform:translateX(0)} }
+      @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+      @keyframes blink { 0%,100%{opacity:1} 49%{opacity:1} 50%{opacity:0} 99%{opacity:0} }
+      @keyframes drift {
+        0%   { transform: translateX(0px); }
+        50%  { transform: translateX(6px); }
+        100% { transform: translateX(0px); }
+      }
+      .dot1{animation:pulse 2s ease-in-out infinite}
+      .dot2{animation:pulse 2s ease-in-out 0.35s infinite}
+      .dot3{animation:pulse 2s ease-in-out 0.7s infinite}
+      .tagline{animation:slideIn 0.9s ease-out 0.4s both}
+      .subtitle{animation:fadeUp 0.9s ease-out 0.7s both}
+      .cursor{animation:blink 1s step-start infinite}
+      .widget1{animation:drift 4s ease-in-out infinite}
+      .widget2{animation:drift 4s ease-in-out 1.3s infinite}
+      .widget3{animation:drift 4s ease-in-out 2.6s infinite}
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="200" rx="12" fill="url(#heroBg)"/>
+
+  <!-- Terminal title bar -->
+  <rect x="0" y="0" width="820" height="36" rx="12" fill="#0d0d1a"/>
+  <rect x="0" y="22" width="820" height="14" fill="#0d0d1a"/>
+
+  <!-- Traffic lights -->
+  <circle cx="26" cy="18" r="7" fill="#FF5F57" class="dot1"/>
+  <circle cx="48" cy="18" r="7" fill="#FFBD2E" class="dot2"/>
+  <circle cx="70" cy="18" r="7" fill="#28CA41" class="dot3"/>
+
+  <!-- Tab bar label -->
+  <text x="410" y="22" font-family="'Courier New', monospace" font-size="11" fill="#4B5563" text-anchor="middle">widget-templates — bash — 80×24</text>
+
+  <!-- Decorative mini-widget previews (right side) -->
+  <!-- Mini terminal widget 1 -->
+  <g class="widget1" transform="translate(648,50)">
+    <rect width="80" height="52" rx="5" fill="#161b22" stroke="#F59E0B" stroke-width="1" opacity="0.7"/>
+    <rect x="0" y="0" width="80" height="14" rx="5" fill="#0d1117" opacity="0.9"/>
+    <circle cx="9" cy="7" r="4" fill="#FF5F57" opacity="0.8"/>
+    <circle cx="21" cy="7" r="4" fill="#FFBD2E" opacity="0.8"/>
+    <circle cx="33" cy="7" r="4" fill="#28CA41" opacity="0.8"/>
+    <text x="6" y="30" font-family="monospace" font-size="7" fill="#10B981">$ uptime</text>
+    <text x="6" y="41" font-family="monospace" font-size="6" fill="#4B5563">42 days, 7:22</text>
+  </g>
+
+  <!-- Mini bar chart widget 2 -->
+  <g class="widget2" transform="translate(742,50)">
+    <rect width="68" height="52" rx="5" fill="#161b22" stroke="#2563EB" stroke-width="1" opacity="0.7"/>
+    <rect x="6" y="38" width="8" height="8" rx="1" fill="#F59E0B" opacity="0.9"/>
+    <rect x="18" y="30" width="8" height="16" rx="1" fill="#F59E0B" opacity="0.9"/>
+    <rect x="30" y="22" width="8" height="24" rx="1" fill="#10B981" opacity="0.9"/>
+    <rect x="42" y="26" width="8" height="20" rx="1" fill="#2563EB" opacity="0.9"/>
+    <rect x="54" y="18" width="8" height="28" rx="1" fill="#10B981" opacity="0.9"/>
+    <text x="34" y="14" font-family="monospace" font-size="6" fill="#4B5563" text-anchor="middle">skills</text>
+  </g>
+
+  <!-- Mini music widget 3 -->
+  <g class="widget3" transform="translate(648,116)">
+    <rect width="80" height="52" rx="5" fill="#161b22" stroke="#10B981" stroke-width="1" opacity="0.7"/>
+    <text x="40" y="18" font-family="monospace" font-size="7" fill="#10B981" text-anchor="middle">▶ lo-fi beats</text>
+    <rect x="6" y="24" width="68" height="3" rx="1" fill="#4B5563"/>
+    <rect x="6" y="24" width="38" height="3" rx="1" fill="#F59E0B"/>
+    <rect x="16" y="34" width="4" height="10" rx="1" fill="#2563EB" opacity="0.8"/>
+    <rect x="24" y="30" width="4" height="14" rx="1" fill="#2563EB" opacity="0.8"/>
+    <rect x="32" y="36" width="4" height="8" rx="1" fill="#2563EB" opacity="0.8"/>
+    <rect x="40" y="32" width="4" height="12" rx="1" fill="#2563EB" opacity="0.8"/>
+    <rect x="48" y="28" width="4" height="16" rx="1" fill="#2563EB" opacity="0.8"/>
+    <rect x="56" y="34" width="4" height="10" rx="1" fill="#2563EB" opacity="0.8"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="310" y="105" font-family="'Courier New', monospace" font-size="52" font-weight="bold"
+        fill="url(#titleGrad)" text-anchor="middle" filter="url(#glow)" class="tagline">widget-templates</text>
+
+  <!-- Cursor after title -->
+  <rect x="490" y="72" width="4" height="38" fill="#F59E0B" class="cursor"/>
+
+  <!-- Tagline -->
+  <text x="310" y="138" font-family="'Courier New', monospace" font-size="13" fill="#10B981"
+        text-anchor="middle" class="subtitle">✦ animated SVG widgets that make your GitHub profile go brrr ✦</text>
+
+  <!-- Stats strip -->
+  <rect x="180" y="158" width="260" height="22" rx="11" fill="#161b22" stroke="#F59E0B" stroke-width="1" opacity="0.8" class="subtitle"/>
+  <text x="310" y="173" font-family="'Courier New', monospace" font-size="10" fill="#F59E0B"
+        text-anchor="middle" class="subtitle">20 widgets · 0 dependencies · pure SVG</text>
+</svg>

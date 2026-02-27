@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" width="820" height="420">
+  <defs>
+    <style>
+      @keyframes fadeCard { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+      .c1{animation:fadeCard 0.5s ease both 0.05s}
+      .c2{animation:fadeCard 0.5s ease both 0.12s}
+      .c3{animation:fadeCard 0.5s ease both 0.19s}
+      .c4{animation:fadeCard 0.5s ease both 0.26s}
+      .c5{animation:fadeCard 0.5s ease both 0.33s}
+      .c6{animation:fadeCard 0.5s ease both 0.40s}
+      .c7{animation:fadeCard 0.5s ease both 0.47s}
+      .c8{animation:fadeCard 0.5s ease both 0.54s}
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="420" rx="12" fill="#0d1117"/>
+  <text x="410" y="28" font-family="'Courier New', monospace" font-size="12" fill="#4B5563" text-anchor="middle">// capability map — widget-templates</text>
+
+  <!-- ─── SECTION HEADERS ─── -->
+  <!-- Terminal Widgets -->
+  <text x="26" y="56" font-family="monospace" font-size="11" fill="#F59E0B" font-weight="bold">TERMINAL WIDGETS</text>
+  <line x1="26" y1="60" x2="400" y2="60" stroke="#F59E0B" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- 6 terminal widget cards (2-column) -->
+  <!-- Card: existential -->
+  <g class="c1">
+    <rect x="26" y="66" width="182" height="54" rx="6" fill="#161b22" stroke="#F59E0B" stroke-width="1"/>
+    <text x="40" y="84" font-family="monospace" font-size="10" fill="#F59E0B">existential.svg</text>
+    <text x="40" y="98" font-family="monospace" font-size="8.5" fill="#4B5563">Matrix-style falling text. For the</text>
+    <text x="40" y="110" font-family="monospace" font-size="8.5" fill="#4B5563">philosophical moments.</text>
+    <circle cx="196" cy="78" r="5" fill="#10B981"/>
+    <text x="196" y="112" font-family="monospace" font-size="7" fill="#10B981" text-anchor="middle">live</text>
+  </g>
+  <!-- Card: github-stats -->
+  <g class="c2">
+    <rect x="218" y="66" width="182" height="54" rx="6" fill="#161b22" stroke="#F59E0B" stroke-width="1"/>
+    <text x="232" y="84" font-family="monospace" font-size="10" fill="#F59E0B">github-stats.svg</text>
+    <text x="232" y="98" font-family="monospace" font-size="8.5" fill="#4B5563">Terminal window with mock commit</text>
+    <text x="232" y="110" font-family="monospace" font-size="8.5" fill="#4B5563">streaks, stars, and contributions.</text>
+    <circle cx="388" cy="78" r="5" fill="#10B981"/>
+    <text x="388" y="112" font-family="monospace" font-size="7" fill="#10B981" text-anchor="middle">live</text>
+  </g>
+  <!-- Card: joke -->
+  <g class="c3">
+    <rect x="26" y="128" width="182" height="54" rx="6" fill="#161b22" stroke="#F59E0B" stroke-width="1"/>
+    <text x="40" y="146" font-family="monospace" font-size="10" fill="#F59E0B">joke.svg</text>
+    <text x="40" y="160" font-family="monospace" font-size="8.5" fill="#4B5563">Programming joke widget.</text>
+    <text x="40" y="172" font-family="monospace" font-size="8.5" fill="#4B5563">Humor as a service.</text>
+    <circle cx="196" cy="140" r="5" fill="#10B981"/>
+  </g>
+  <!-- Card: rain -->
+  <g class="c4">
+    <rect x="218" y="128" width="182" height="54" rx="6" fill="#161b22" stroke="#F59E0B" stroke-width="1"/>
+    <text x="232" y="146" font-family="monospace" font-size="10" fill="#F59E0B">rain.svg</text>
+    <text x="232" y="160" font-family="monospace" font-size="8.5" fill="#4B5563">ASCII rain animation. Strangely</text>
+    <text x="232" y="172" font-family="monospace" font-size="8.5" fill="#4B5563">calming. Actually therapeutic.</text>
+    <circle cx="388" cy="140" r="5" fill="#10B981"/>
+  </g>
+  <!-- Card: skills -->
+  <g class="c5">
+    <rect x="26" y="190" width="182" height="54" rx="6" fill="#161b22" stroke="#F59E0B" stroke-width="1"/>
+    <text x="40" y="208" font-family="monospace" font-size="10" fill="#F59E0B">skills.svg</text>
+    <text x="40" y="222" font-family="monospace" font-size="8.5" fill="#4B5563">Animated progress bar chart for</text>
+    <text x="40" y="234" font-family="monospace" font-size="8.5" fill="#4B5563">skills. Self-aware. Accurate.</text>
+    <circle cx="196" cy="202" r="5" fill="#10B981"/>
+  </g>
+  <!-- Card: status -->
+  <g class="c6">
+    <rect x="218" y="190" width="182" height="54" rx="6" fill="#161b22" stroke="#F59E0B" stroke-width="1"/>
+    <text x="232" y="208" font-family="monospace" font-size="10" fill="#F59E0B">status.svg</text>
+    <text x="232" y="222" font-family="monospace" font-size="8.5" fill="#4B5563">Current activity / status display.</text>
+    <text x="232" y="234" font-family="monospace" font-size="8.5" fill="#4B5563">What are you even doing.</text>
+    <circle cx="388" cy="202" r="5" fill="#10B981"/>
+  </g>
+
+  <!-- ─── CODE / FILE / GIT ─── -->
+  <text x="430" y="56" font-family="monospace" font-size="11" fill="#2563EB" font-weight="bold">CODE · FILE · GIT</text>
+  <line x1="430" y1="60" x2="800" y2="60" stroke="#2563EB" stroke-width="0.5" opacity="0.4"/>
+
+  <g class="c1">
+    <rect x="430" y="66" width="175" height="54" rx="6" fill="#161b22" stroke="#2563EB" stroke-width="1"/>
+    <text x="444" y="84" font-family="monospace" font-size="10" fill="#2563EB">code-editor.svg</text>
+    <text x="444" y="98" font-family="monospace" font-size="8.5" fill="#4B5563">VS Code–style editor, syntax-highlighted</text>
+    <text x="444" y="110" font-family="monospace" font-size="8.5" fill="#4B5563">Python, blinking cursor.</text>
+    <circle cx="593" cy="78" r="5" fill="#10B981"/>
+  </g>
+  <g class="c2">
+    <rect x="614" y="66" width="180" height="54" rx="6" fill="#161b22" stroke="#2563EB" stroke-width="1"/>
+    <text x="628" y="84" font-family="monospace" font-size="10" fill="#2563EB">file-explorer.svg</text>
+    <text x="628" y="98" font-family="monospace" font-size="8.5" fill="#4B5563">macOS Finder–style file panel with</text>
+    <text x="628" y="110" font-family="monospace" font-size="8.5" fill="#4B5563">slide animations. Light theme.</text>
+    <circle cx="782" cy="78" r="5" fill="#10B981"/>
+  </g>
+  <g class="c3">
+    <rect x="430" y="128" width="175" height="54" rx="6" fill="#161b22" stroke="#2563EB" stroke-width="1"/>
+    <text x="444" y="146" font-family="monospace" font-size="10" fill="#2563EB">commit-history.svg</text>
+    <text x="444" y="160" font-family="monospace" font-size="8.5" fill="#4B5563">GitHub-style commit graph with</text>
+    <text x="444" y="172" font-family="monospace" font-size="8.5" fill="#4B5563">branch visualization.</text>
+    <circle cx="593" cy="140" r="5" fill="#10B981"/>
+  </g>
+  <g class="c4">
+    <rect x="614" y="128" width="180" height="54" rx="6" fill="#161b22" stroke="#2563EB" stroke-width="1"/>
+    <text x="628" y="146" font-family="monospace" font-size="10" fill="#2563EB">contribution-graph.svg</text>
+    <text x="628" y="160" font-family="monospace" font-size="8.5" fill="#4B5563">The green contribution grid.</text>
+    <text x="628" y="172" font-family="monospace" font-size="8.5" fill="#4B5563">But make it a widget.</text>
+    <circle cx="782" cy="140" r="5" fill="#10B981"/>
+  </g>
+
+  <!-- ─── UTILITY / SOCIAL ─── -->
+  <text x="26" y="266" font-family="monospace" font-size="11" fill="#10B981" font-weight="bold">UTILITY WIDGETS</text>
+  <line x1="26" y1="270" x2="400" y2="270" stroke="#10B981" stroke-width="0.5" opacity="0.4"/>
+
+  <g class="c5">
+    <rect x="26" y="276" width="175" height="44" rx="6" fill="#161b22" stroke="#10B981" stroke-width="1"/>
+    <text x="40" y="294" font-family="monospace" font-size="10" fill="#10B981">weather.svg</text>
+    <text x="40" y="308" font-family="monospace" font-size="8.5" fill="#4B5563">Animated sun/clouds, weather info. Vibes.</text>
+    <circle cx="189" cy="286" r="5" fill="#10B981"/>
+  </g>
+  <g class="c6">
+    <rect x="210" y="276" width="190" height="44" rx="6" fill="#161b22" stroke="#10B981" stroke-width="1"/>
+    <text x="224" y="294" font-family="monospace" font-size="10" fill="#10B981">music-player.svg</text>
+    <text x="224" y="308" font-family="monospace" font-size="8.5" fill="#4B5563">Spotify-style player with EQ bars.</text>
+    <circle cx="388" cy="286" r="5" fill="#10B981"/>
+  </g>
+  <g class="c7">
+    <rect x="26" y="328" width="175" height="44" rx="6" fill="#161b22" stroke="#10B981" stroke-width="1"/>
+    <text x="40" y="346" font-family="monospace" font-size="10" fill="#10B981">system-monitor.svg</text>
+    <text x="40" y="360" font-family="monospace" font-size="8.5" fill="#4B5563">CPU, RAM, disk, network gauges.</text>
+    <circle cx="189" cy="340" r="5" fill="#10B981"/>
+  </g>
+  <g class="c8">
+    <rect x="210" y="328" width="190" height="44" rx="6" fill="#161b22" stroke="#10B981" stroke-width="1"/>
+    <text x="224" y="346" font-family="monospace" font-size="10" fill="#10B981">network-activity.svg</text>
+    <text x="224" y="360" font-family="monospace" font-size="8.5" fill="#4B5563">Network topology + animated packets.</text>
+    <circle cx="388" cy="340" r="5" fill="#10B981"/>
+  </g>
+
+  <!-- ─── SOCIAL / PROGRESS ─── -->
+  <text x="430" y="266" font-family="monospace" font-size="11" fill="#a855f7" font-weight="bold">SOCIAL · PROGRESS · TIME</text>
+  <line x1="430" y1="270" x2="800" y2="270" stroke="#a855f7" stroke-width="0.5" opacity="0.4"/>
+
+  <g class="c5">
+    <rect x="430" y="276" width="175" height="44" rx="6" fill="#161b22" stroke="#a855f7" stroke-width="1"/>
+    <text x="444" y="294" font-family="monospace" font-size="10" fill="#a855f7">social-stats.svg</text>
+    <text x="444" y="308" font-family="monospace" font-size="8.5" fill="#4B5563">Follower counts + growth trends.</text>
+    <circle cx="593" cy="286" r="5" fill="#10B981"/>
+  </g>
+  <g class="c6">
+    <rect x="614" y="276" width="180" height="44" rx="6" fill="#161b22" stroke="#a855f7" stroke-width="1"/>
+    <text x="628" y="294" font-family="monospace" font-size="10" fill="#a855f7">progress-tracker.svg</text>
+    <text x="628" y="308" font-family="monospace" font-size="8.5" fill="#4B5563">Animated progress bars + checkmarks.</text>
+    <circle cx="782" cy="286" r="5" fill="#10B981"/>
+  </g>
+  <g class="c7">
+    <rect x="430" y="328" width="175" height="44" rx="6" fill="#161b22" stroke="#a855f7" stroke-width="1"/>
+    <text x="444" y="346" font-family="monospace" font-size="10" fill="#a855f7">inspiration-quote.svg</text>
+    <text x="444" y="360" font-family="monospace" font-size="8.5" fill="#4B5563">Quote + sparkles + gradient shimmer.</text>
+    <circle cx="593" cy="340" r="5" fill="#10B981"/>
+  </g>
+  <g class="c8">
+    <rect x="614" y="328" width="180" height="44" rx="6" fill="#161b22" stroke="#a855f7" stroke-width="1"/>
+    <text x="628" y="346" font-family="monospace" font-size="10" fill="#a855f7">time-zones.svg · calendar.svg</text>
+    <text x="628" y="360" font-family="monospace" font-size="8.5" fill="#4B5563">World clock + monthly calendar.</text>
+    <circle cx="782" cy="340" r="5" fill="#10B981"/>
+  </g>
+
+  <!-- Legend -->
+  <circle cx="36" cy="398" r="5" fill="#10B981"/>
+  <text x="46" y="402" font-family="monospace" font-size="9" fill="#4B5563">implemented &amp; live</text>
+  <circle cx="160" cy="398" r="5" fill="#F59E0B"/>
+  <text x="170" y="402" font-family="monospace" font-size="9" fill="#4B5563">in-progress</text>
+  <circle cx="254" cy="398" r="5" fill="#4B5563"/>
+  <text x="264" y="402" font-family="monospace" font-size="9" fill="#4B5563">planned</text>
+  <text x="798" y="402" font-family="monospace" font-size="9" fill="#4B5563" text-anchor="end">20 widgets total · all pure SVG · zero dependencies</text>
+</svg>

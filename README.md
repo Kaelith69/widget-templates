@@ -1,49 +1,16 @@
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 180" width="860" height="180">
-  <defs>
-    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e"/>
-      <stop offset="100%" style="stop-color:#16213e"/>
-    </linearGradient>
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#F59E0B"/>
-      <stop offset="50%" style="stop-color:#2563EB"/>
-      <stop offset="100%" style="stop-color:#10B981"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <style>
-      @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
-      @keyframes slideIn { from{opacity:0;transform:translateX(-20px)} to{opacity:1;transform:translateX(0)} }
-      .dot1{animation:pulse 2s ease-in-out infinite}
-      .dot2{animation:pulse 2s ease-in-out 0.3s infinite}
-      .dot3{animation:pulse 2s ease-in-out 0.6s infinite}
-      .tagline{animation:slideIn 1s ease-out 0.5s both}
-    </style>
-  </defs>
-  <rect width="860" height="180" rx="14" fill="url(#heroBg)"/>
-  <rect x="0" y="0" width="860" height="36" rx="14" fill="#0d0d1a"/>
-  <rect x="0" y="22" width="860" height="14" fill="#0d0d1a"/>
-  <circle cx="28" cy="18" r="7" fill="#FF5F57" class="dot1"/>
-  <circle cx="50" cy="18" r="7" fill="#FFBD2E" class="dot2"/>
-  <circle cx="72" cy="18" r="7" fill="#28CA41" class="dot3"/>
-  <text x="430" y="22" font-family="monospace" font-size="12" fill="#888" text-anchor="middle">widget-templates — zsh</text>
-  <text x="430" y="100" font-family="'Courier New', monospace" font-size="48" font-weight="bold"
-        fill="url(#titleGrad)" text-anchor="middle" filter="url(#glow)">widget-templates</text>
-  <text x="430" y="138" font-family="monospace" font-size="14" fill="#10B981"
-        text-anchor="middle" class="tagline">✦ animated SVG widgets that make your GitHub profile go brrr ✦</text>
-  <rect x="350" y="152" width="160" height="20" rx="10" fill="#F59E0B" opacity="0.15"/>
-  <text x="430" y="166" font-family="monospace" font-size="11" fill="#F59E0B"
-        text-anchor="middle">20 widgets · zero dependencies · pure SVG</text>
-</svg>
+  <img src="assets/hero-banner.svg" alt="widget-templates — animated SVG widgets that make your GitHub profile go brrr" width="820" />
 </p>
+
+**animated SVG widgets that make your GitHub profile go brrr — no npm, no build step, no existential dread (well, there's one widget for that)**
+
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Architecture](#-architecture) • [Roadmap](#-roadmap) • [License](#-license)
 
 ---
 
-> You know that feeling when your GitHub profile is just... a wall of text? Yeah. This fixes that.
-> **widget-templates** is a collection of 20 hand-crafted, animated SVG widgets you can drop straight into any GitHub profile README or personal website — no npm, no build step, no existential dread (well, there's one widget for that).
+*You know that feeling when your GitHub profile is just a wall of text and a green squares grid? widget-templates is what you put there instead. Twenty hand-crafted, fully animated SVG widgets — each a single file, no runtime, no dependencies — that you paste into your README in about 30 seconds and immediately look like you spent a weekend on it.*
+
+widget-templates is a collection of 20 standalone `.svg` files for GitHub profile READMEs and personal websites. Every widget is animated with inline CSS `@keyframes` — the one animation technique GitHub's SVG sanitizer preserves while stripping everything else. Each file is self-contained, under 10 KB, and embeds with a single line of markdown. There's no package to install, no server to run, and no configuration file waiting to bite you.
 
 ---
 
@@ -54,139 +21,86 @@
 ![Widgets](https://img.shields.io/badge/widgets-20-F59E0B?style=for-the-badge&logo=svg&logoColor=white)
 ![Dependencies](https://img.shields.io/badge/dependencies-0-10B981?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-2563EB?style=for-the-badge)
-![Platform](https://img.shields.io/badge/platform-GitHub%20%7C%20Web-6366F1?style=for-the-badge)
-![Format](https://img.shields.io/badge/format-SVG-orange?style=for-the-badge&logo=svg)
+![Platform](https://img.shields.io/badge/platform-GitHub%20%7C%20Web-4B5563?style=for-the-badge)
+![Format](https://img.shields.io/badge/format-SVG-F59E0B?style=for-the-badge&logo=svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-10B981?style=for-the-badge)
 
 </p>
 
 ---
 
-## 🎬 Live Demo
-
-> **Place demo GIF here:** `assets/demo.gif`
-
-![Demo](assets/demo.gif)
-
-*The GIF should show:*
-- *Scrolling through several widgets rendered in a browser or GitHub profile*
-- *The animations playing (falling text in `existential.svg`, equalizer bars in `music-player.svg`, rain in `rain.svg`)*
-- *A quick side-by-side of the dark terminal widgets vs. the light file-explorer widget*
-- *Optional: a terminal showing the copy-paste workflow (open SVG → paste in README → push → profit)*
-
----
-
 ## 🧠 System Overview
 
-This isn't a framework, a SaaS, or a startup with a YC badge. It's a folder of SVGs that are really good at being SVGs.
+This isn't a framework or a SaaS. It's a folder of SVGs that are genuinely good at being SVGs.
 
-Each widget is:
-- A **single `.svg` file** — self-contained, no external resources
-- Animated entirely with **inline CSS `@keyframes`**
-- Themed around either a **dark terminal aesthetic** or a **light macOS/web aesthetic**
-- Embeddable with one line of markdown
+Each widget is a single `.svg` file containing structure (SVG elements), styles (inline CSS with `@keyframes`), and definitions (gradients, filters, reusable shapes) — all in one file, no external resources. Drop it in your repo, reference it in markdown, done. See the [Architecture docs](docs/wiki/Architecture.md) for a deeper look at how GitHub processes these files.
 
-Think of it as a widget vending machine. You pick one, you drop it in your README, done. The widget does its little animation dance forever and you look like you spent three weekends on your profile when it was actually 30 seconds.
+```
+widget-templates/
+├── existential.svg        ← each widget is one self-contained file
+├── github-stats.svg
+├── ...                    ← (20 total)
+├── assets/                ← README assets (diagrams, hero)
+├── docs/wiki/             ← detailed documentation
+├── example-profile-README.md
+└── README.md
+```
+
+<p align="center">
+  <img src="assets/architecture.svg" alt="Architecture diagram showing the flow from user to browser through the repository and GitHub CDN embedding layers" width="820" />
+</p>
+
+The deployment model is as static as it gets: user picks a file, drops it in their repo, references it in markdown, and GitHub's CDN serves the raw SVG bytes. No build pipeline, no server, no caching layer you control. GitHub's `camo` proxy sanitizes the SVG on the way out — stripping `<script>` tags and event handlers while preserving CSS animations — and that's the whole stack.
 
 ---
 
 ## ✨ Features
 
-### Terminal-Style Widgets (Dark Theme 🖤)
-| Widget | What it does |
+### 🖤 Terminal Widgets
+| Feature | What it actually does |
 |---|---|
-| `existential.svg` | Matrix-style falling text. For when you want your profile to ask the hard questions. |
-| `github-stats.svg` | Mock GitHub stats in a terminal window. Very official looking. |
-| `joke.svg` | A programming joke widget. Humor as a service. |
-| `rain.svg` | ASCII rain animation. Therapeutic. Actually calming. |
-| `skills.svg` | "Skill issue" progress bar chart. Self-aware. Accurate. |
-| `status.svg` | Current status/activity display. What are you even doing right now. |
+| 🌧️ `existential.svg` | Renders columns of characters falling top-to-bottom in staggered `translateY` animations. Each column has a different `animation-delay` so they don't all start at once. |
+| 📊 `github-stats.svg` | Displays a fake-but-convincing terminal window with commit streaks, star counts, and contribution stats. The numbers are yours to edit. |
+| 😄 `joke.svg` | Shows a two-part programming joke with setup and punchline separated by a timed `opacity` animation. |
+| 🌧️ `rain.svg` | ASCII rainfall using `translateY` keyframes on monospace characters at varying speeds. Genuinely calming. |
+| 📈 `skills.svg` | Progress bars that animate from 0% to their target width via `scaleX` on load. Labels and values are plain text — edit freely. |
+| 🟢 `status.svg` | Pulsing status indicator with customizable activity text. Good for "currently building X" or "ask me about Y". |
 
-### Code & File Widgets 📁
-| Widget | What it does |
+### 📁 Code & File Widgets
+| Feature | What it actually does |
 |---|---|
-| `code-editor.svg` | VS Code-style editor with syntax-highlighted Python and a blinking cursor. You look productive. |
-| `file-explorer.svg` | macOS Finder-style file explorer with slide animations. Light theme gang. |
+| 💻 `code-editor.svg` | VS Code window frame with syntax-highlighted Python (keyword, string, comment colors) and a `steps()`-timed blinking cursor. |
+| 📂 `file-explorer.svg` | macOS Finder-style file list with `translateX` slide-in animations per row. Light theme. |
 
-### Git Widgets 🌿
-| Widget | What it does |
+### 🌿 Git Widgets
+| Feature | What it actually does |
 |---|---|
-| `commit-history.svg` | GitHub-style commit history with branch visualization. |
-| `contribution-graph.svg` | That green contribution grid. But make it widget. |
+| 🕰️ `commit-history.svg` | GitHub-style commit timeline with colored branch lines and commit dot markers. |
+| 🟩 `contribution-graph.svg` | The contribution grid — colored squares in GitHub's green palette, arranged in a week × month layout. |
 
-### Utility Widgets 🛠️
-| Widget | What it does |
+### 🛠️ Utility Widgets
+| Feature | What it actually does |
 |---|---|
-| `weather.svg` | Animated sun, clouds, weather info. Vibes. |
-| `music-player.svg` | Spotify-style player with animated equalizer bars. Currently playing: lo-fi. |
-| `calendar.svg` | Monthly calendar, today highlighted. Time is a construct but at least it's animated. |
-| `system-monitor.svg` | CPU, RAM, disk, network. For the sysadmin in all of us. |
-| `time-zones.svg` | World clock for multiple time zones. For when you collaborate globally and forget what time it is. |
-| `network-activity.svg` | Network topology with animated data packets. It looks like you understand networking. |
+| ☀️ `weather.svg` | Animated sun with rotating rays, cloud shapes that drift, and weather data text fields. Light theme. |
+| 🎵 `music-player.svg` | Spotify-ish player UI with `scaleY` equalizer bars that animate at different speeds to simulate audio playback. |
+| 📅 `calendar.svg` | Monthly grid with today's date highlighted. Static month/year — edit the text to update it. |
+| 💻 `system-monitor.svg` | CPU, RAM, disk, and network gauges with animated fill bars. Values are static — set them to whatever looks accurate. |
+| 🌍 `time-zones.svg` | World clock showing multiple cities and their UTC offsets. Times are static text — update when you remember. |
+| 🌐 `network-activity.svg` | Network topology diagram with dots animating along connecting lines to simulate packet travel. |
 
-### Social & Progress Widgets 📊
-| Widget | What it does |
+### 📊 Social & Progress Widgets
+| Feature | What it actually does |
 |---|---|
-| `social-stats.svg` | Social media follower counts and growth trends. |
-| `progress-tracker.svg` | Project progress bars with animated checkmarks. You're almost done. |
-| `inspiration-quote.svg` | Inspirational quote with sparkles and gradient. It's fine. We're fine. |
+| 👥 `social-stats.svg` | Follower counts and growth percentages for social platforms. Fully static — your numbers, your call. |
+| ✅ `progress-tracker.svg` | Project milestone bars with animated checkmarks that appear as bars reach 100%. |
+| ✨ `inspiration-quote.svg` | Quote text with a gradient shimmer animation and decorative sparkle elements. |
 
 ---
 
 ## 🗺️ Capability Visualization
 
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 360" width="740" height="360">
-  <defs>
-    <style>
-      @keyframes fadeIn { from{opacity:0} to{opacity:1} }
-      .cap-card { animation: fadeIn 0.8s ease both }
-    </style>
-  </defs>
-  <rect width="740" height="360" rx="12" fill="#0d1117"/>
-  <text x="370" y="32" font-family="monospace" font-size="13" fill="#888" text-anchor="middle">// capability map</text>
-
-  <rect x="30" y="50" width="200" height="130" rx="8" fill="#161b22" stroke="#F59E0B" stroke-width="1.5" class="cap-card" style="animation-delay:0.1s"/>
-  <text x="130" y="72" font-family="monospace" font-size="11" fill="#F59E0B" text-anchor="middle" font-weight="bold">TERMINAL WIDGETS</text>
-  <text x="50" y="94" font-family="monospace" font-size="10" fill="#ccc">▸ existential.svg</text>
-  <text x="50" y="110" font-family="monospace" font-size="10" fill="#ccc">▸ github-stats.svg</text>
-  <text x="50" y="126" font-family="monospace" font-size="10" fill="#ccc">▸ joke.svg</text>
-  <text x="50" y="142" font-family="monospace" font-size="10" fill="#ccc">▸ rain.svg</text>
-  <text x="50" y="158" font-family="monospace" font-size="10" fill="#ccc">▸ skills.svg  ▸ status.svg</text>
-
-  <rect x="270" y="50" width="200" height="130" rx="8" fill="#161b22" stroke="#2563EB" stroke-width="1.5" class="cap-card" style="animation-delay:0.2s"/>
-  <text x="370" y="72" font-family="monospace" font-size="11" fill="#2563EB" text-anchor="middle" font-weight="bold">CODE &amp; FILE</text>
-  <text x="290" y="94" font-family="monospace" font-size="10" fill="#ccc">▸ code-editor.svg</text>
-  <text x="290" y="110" font-family="monospace" font-size="10" fill="#ccc">▸ file-explorer.svg</text>
-  <text x="290" y="134" font-family="monospace" font-size="11" fill="#4ade80">Git Widgets</text>
-  <text x="290" y="152" font-family="monospace" font-size="10" fill="#ccc">▸ commit-history.svg</text>
-  <text x="290" y="168" font-family="monospace" font-size="10" fill="#ccc">▸ contribution-graph.svg</text>
-
-  <rect x="510" y="50" width="200" height="130" rx="8" fill="#161b22" stroke="#10B981" stroke-width="1.5" class="cap-card" style="animation-delay:0.3s"/>
-  <text x="610" y="72" font-family="monospace" font-size="11" fill="#10B981" text-anchor="middle" font-weight="bold">UTILITY WIDGETS</text>
-  <text x="530" y="94" font-family="monospace" font-size="10" fill="#ccc">▸ weather.svg</text>
-  <text x="530" y="110" font-family="monospace" font-size="10" fill="#ccc">▸ music-player.svg</text>
-  <text x="530" y="126" font-family="monospace" font-size="10" fill="#ccc">▸ calendar.svg</text>
-  <text x="530" y="142" font-family="monospace" font-size="10" fill="#ccc">▸ system-monitor.svg</text>
-  <text x="530" y="158" font-family="monospace" font-size="10" fill="#ccc">▸ time-zones.svg</text>
-
-  <rect x="30" y="210" width="200" height="110" rx="8" fill="#161b22" stroke="#a855f7" stroke-width="1.5" class="cap-card" style="animation-delay:0.4s"/>
-  <text x="130" y="232" font-family="monospace" font-size="11" fill="#a855f7" text-anchor="middle" font-weight="bold">SOCIAL &amp; PROGRESS</text>
-  <text x="50" y="254" font-family="monospace" font-size="10" fill="#ccc">▸ social-stats.svg</text>
-  <text x="50" y="270" font-family="monospace" font-size="10" fill="#ccc">▸ progress-tracker.svg</text>
-  <text x="50" y="286" font-family="monospace" font-size="10" fill="#ccc">▸ inspiration-quote.svg</text>
-  <text x="50" y="302" font-family="monospace" font-size="10" fill="#ccc">▸ network-activity.svg</text>
-
-  <rect x="270" y="210" width="440" height="110" rx="8" fill="#161b22" stroke="#F59E0B" stroke-width="1" stroke-dasharray="4 2" class="cap-card" style="animation-delay:0.5s"/>
-  <text x="490" y="232" font-family="monospace" font-size="11" fill="#F59E0B" text-anchor="middle" font-weight="bold">CORE PROPERTIES (all widgets)</text>
-  <text x="290" y="256" font-family="monospace" font-size="10" fill="#10B981">✓ Zero external dependencies</text>
-  <text x="290" y="272" font-family="monospace" font-size="10" fill="#10B981">✓ Pure SVG + CSS animations</text>
-  <text x="290" y="288" font-family="monospace" font-size="10" fill="#10B981">✓ Embeds in GitHub markdown</text>
-  <text x="510" y="256" font-family="monospace" font-size="10" fill="#10B981">✓ Text editor customizable</text>
-  <text x="510" y="272" font-family="monospace" font-size="10" fill="#10B981">✓ Under 10KB each</text>
-  <text x="510" y="288" font-family="monospace" font-size="10" fill="#10B981">✓ Browser compatible</text>
-  <text x="370" y="345" font-family="monospace" font-size="12" fill="#555" text-anchor="middle">20 widgets total — pick your poison</text>
-</svg>
+  <img src="assets/capabilities.svg" alt="Capability map showing 20 widgets organized into Terminal, Code/File/Git, Utility, and Social/Progress categories with implementation status" width="820" />
 </p>
 
 ---
@@ -196,207 +110,130 @@ Think of it as a widget vending machine. You pick one, you drop it in your READM
 > It's not that complicated. That's the point.
 
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 320" width="740" height="320">
-  <defs>
-    <marker id="arrowA" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#555"/>
-    </marker>
-  </defs>
-  <rect width="740" height="320" rx="12" fill="#0d1117"/>
-  <text x="370" y="28" font-family="monospace" font-size="13" fill="#888" text-anchor="middle">// architecture diagram</text>
-
-  <rect x="300" y="44" width="140" height="44" rx="8" fill="#1e293b" stroke="#F59E0B" stroke-width="1.5"/>
-  <text x="370" y="61" font-family="monospace" font-size="11" fill="#F59E0B" text-anchor="middle">👤 User</text>
-  <text x="370" y="78" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">picks a widget SVG</text>
-
-  <line x1="370" y1="88" x2="370" y2="112" stroke="#555" stroke-width="1.5" marker-end="url(#arrowA)"/>
-
-  <rect x="220" y="112" width="300" height="44" rx="8" fill="#1e293b" stroke="#2563EB" stroke-width="1.5"/>
-  <text x="370" y="129" font-family="monospace" font-size="11" fill="#2563EB" text-anchor="middle">📁 widget-templates repo</text>
-  <text x="370" y="146" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">20 × .svg files (static, self-contained)</text>
-
-  <line x1="370" y1="156" x2="370" y2="180" stroke="#555" stroke-width="1.5"/>
-  <line x1="200" y1="180" x2="540" y2="180" stroke="#555" stroke-width="1.5"/>
-  <line x1="200" y1="180" x2="200" y2="204" stroke="#555" stroke-width="1.5" marker-end="url(#arrowA)"/>
-  <line x1="540" y1="180" x2="540" y2="204" stroke="#555" stroke-width="1.5" marker-end="url(#arrowA)"/>
-
-  <rect x="80" y="204" width="240" height="44" rx="8" fill="#1e293b" stroke="#10B981" stroke-width="1.5"/>
-  <text x="200" y="221" font-family="monospace" font-size="11" fill="#10B981" text-anchor="middle">🐙 GitHub Profile README</text>
-  <text x="200" y="238" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">![Widget](./widget.svg)</text>
-
-  <rect x="420" y="204" width="240" height="44" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
-  <text x="540" y="221" font-family="monospace" font-size="11" fill="#a855f7" text-anchor="middle">🌐 Personal Website / HTML</text>
-  <text x="540" y="238" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">&lt;img src="widget.svg" /&gt;</text>
-
-  <line x1="200" y1="248" x2="200" y2="268" stroke="#555" stroke-width="1.5"/>
-  <line x1="540" y1="248" x2="540" y2="268" stroke="#555" stroke-width="1.5"/>
-  <line x1="200" y1="268" x2="540" y2="268" stroke="#555" stroke-width="1.5"/>
-  <line x1="370" y1="268" x2="370" y2="278" stroke="#555" stroke-width="1.5" marker-end="url(#arrowA)"/>
-
-  <rect x="280" y="278" width="180" height="30" rx="8" fill="#1e293b" stroke="#F59E0B" stroke-width="1.5"/>
-  <text x="370" y="298" font-family="monospace" font-size="11" fill="#F59E0B" text-anchor="middle">🌍 Browser renders SVG</text>
-
-  <text x="680" y="200" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">no server</text>
-  <text x="680" y="214" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">no runtime</text>
-  <text x="680" y="228" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">no magic</text>
-  <text x="680" y="242" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">just files</text>
-</svg>
+  <img src="assets/architecture.svg" alt="Architecture diagram showing the static-file deployment model: user selects SVG, repo hosts file, GitHub CDN sanitizes and serves it, browser renders animations" width="820" />
 </p>
+
+Each SVG widget is structured in three layers: **definitions** (`<defs>` — gradients, filters, markers), **styles** (`<style>` — `@keyframes` and class selectors), and **elements** (the actual `<rect>`, `<text>`, `<line>`, and `<path>` nodes that form the visual). There are no threads, no processes, and no state — the CSS animation engine in the browser is the only runtime that touches these files.
+
+The critical design constraint is GitHub's SVG sanitizer. GitHub strips `<script>` tags and inline event handlers (`onclick`, `onload`, etc.) from SVGs before serving them. CSS `@keyframes` animations survive this sanitization intact, which is why every widget uses them exclusively. This isn't a workaround — it's the intended path. The constraint also eliminates an entire category of security concern: no widget can phone home, execute arbitrary code, or track the viewer.
 
 ---
 
 ## 🌊 Data Flow
 
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 200" width="740" height="200">
-  <defs>
-    <marker id="arrowB" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#F59E0B"/>
-    </marker>
-    <style>
-      @keyframes flow {
-        0% { stroke-dashoffset: 20; }
-        100% { stroke-dashoffset: 0; }
-      }
-      .flow-line { stroke-dasharray: 6 4; animation: flow 1s linear infinite; }
-    </style>
-  </defs>
-  <rect width="740" height="200" rx="12" fill="#0d1117"/>
-  <text x="370" y="24" font-family="monospace" font-size="12" fill="#888" text-anchor="middle">// data flow — from widget to your screen</text>
-
-  <rect x="20" y="60" width="120" height="80" rx="8" fill="#1e293b" stroke="#F59E0B" stroke-width="1.5"/>
-  <text x="80" y="96" font-family="monospace" font-size="10" fill="#F59E0B" text-anchor="middle">1. SVG File</text>
-  <text x="80" y="112" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">static asset</text>
-  <text x="80" y="128" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">on disk</text>
-
-  <line x1="140" y1="100" x2="175" y2="100" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrowB)" class="flow-line"/>
-
-  <rect x="175" y="60" width="140" height="80" rx="8" fill="#1e293b" stroke="#2563EB" stroke-width="1.5"/>
-  <text x="245" y="96" font-family="monospace" font-size="10" fill="#2563EB" text-anchor="middle">2. README.md</text>
-  <text x="245" y="112" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">markdown img ref</text>
-  <text x="245" y="128" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">![w](./w.svg)</text>
-
-  <line x1="315" y1="100" x2="350" y2="100" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrowB)" class="flow-line"/>
-
-  <rect x="350" y="60" width="140" height="80" rx="8" fill="#1e293b" stroke="#10B981" stroke-width="1.5"/>
-  <text x="420" y="96" font-family="monospace" font-size="10" fill="#10B981" text-anchor="middle">3. GitHub CDN</text>
-  <text x="420" y="112" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">caches &amp; serves</text>
-  <text x="420" y="128" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">raw SVG bytes</text>
-
-  <line x1="490" y1="100" x2="525" y2="100" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrowB)" class="flow-line"/>
-
-  <rect x="525" y="60" width="140" height="80" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
-  <text x="595" y="88" font-family="monospace" font-size="10" fill="#a855f7" text-anchor="middle">4. Browser</text>
-  <text x="595" y="104" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">parses SVG + CSS</text>
-  <text x="595" y="120" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">runs animations</text>
-  <text x="595" y="136" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">renders frames</text>
-
-  <text x="370" y="180" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">zero network calls from the widget itself · all animation logic is inline CSS</text>
-</svg>
+  <img src="assets/data-flow.svg" alt="Data flow diagram showing the path from SVG file through README reference, GitHub CDN sanitization, to browser CSS animation rendering" width="820" />
 </p>
+
+Primary data path:
+
+```
+SVG file on disk
+  → referenced in README.md as  ![Widget](./skills.svg)
+  → GitHub fetches raw SVG bytes
+  → camo proxy sanitizes (strips scripts, preserves @keyframes)
+  → browser receives clean SVG
+  → CSS animation engine starts @keyframes
+  → frames rendered at 60fps forever
+```
+
+No network calls originate from within the widget itself. No external fonts, no remote images, no API calls. The only bytes that travel are the SVG file itself.
 
 ---
 
 ## 📦 Installation
 
-No `npm install`. No `pip install`. No `brew install`. The audacity of it all.
+No build tool, no package manager, no runtime. The files in this repo are the product.
 
-### Option A: GitHub Profile README (most common)
+### Option A: GitHub Profile README
 
-**Step 1:** Copy or download the SVG file(s) you want.
+**1.** Copy or download the `.svg` file(s) you want — clone the repo or download individual files.
 
-**Step 2:** Upload them to your GitHub profile repository (the one named `<your-username>/<your-username>`).
+**2.** Upload them to your GitHub profile repository — the special repo named `<your-username>/<your-username>`. That's the one whose README shows up on your profile page.
 
-**Step 3:** Reference them in your `README.md`:
+**3.** Reference the file in your `README.md`:
 
 ```markdown
 ![GitHub Stats](./github-stats.svg)
 ```
 
-Or with HTML for alignment control:
+Use HTML for layout control (centering, side-by-side):
+
 ```html
 <p align="center">
   <img src="./github-stats.svg" alt="GitHub Stats" width="100%" />
 </p>
 ```
 
-### Option B: Personal Website / HTML project
+> **Pro tip:** If your widget looks right in a browser but doesn't animate on GitHub, wait a few minutes. GitHub's `camo` CDN caches SVGs aggressively — force a cache bust by appending `?v=2` to the filename in your markdown reference.
+
+### Option B: Personal Website / HTML
 
 ```html
-<!-- Drop-in as an image -->
+<!-- As an image element -->
 <img src="path/to/skills.svg" alt="Skills" style="max-width: 100%;" />
 
-<!-- Or inline the SVG directly in your HTML for CSS/JS control -->
-<!-- Just paste the SVG file contents right into your HTML -->
+<!-- Inlined directly in HTML — gives you CSS/JS access to the SVG's internals -->
+<!-- Paste the SVG file's contents directly into your HTML document -->
 ```
 
-### Option C: Clone the whole repo
+Inlining gives you the ability to override colors with external CSS, which you can't do with `<img>`. Useful if you're theming a portfolio site.
+
+### Option C: Clone the repo
 
 ```bash
 git clone https://github.com/Kaelith69/widget-templates.git
 cd widget-templates
-# Pick your widgets, copy them, customize, go
+# Pick your widgets, copy them to your project, customize
 ```
 
 ---
 
 ## 🚀 Usage
 
-### Basic embed
+**1.** Pick a widget from the list above.
+
+**2.** Copy the `.svg` file to wherever you're using it.
+
+**3.** Reference it in markdown:
 
 ```markdown
 ![Existential Crisis](./existential.svg)
 ```
 
-### Centered layout (recommended)
-
-```html
-<p align="center">
-  <img src="./github-stats.svg" alt="GitHub Stats" width="49%" />
-  <img src="./contribution-graph.svg" alt="Contributions" width="49%" />
-</p>
-```
-
-### Customizing text
-
-Open any SVG in a text editor (VS Code works great), find `<text>` tags, change the content:
+**4.** Customize the text — open the file in any text editor, find `<text>` elements, change the content:
 
 ```xml
-<!-- Before -->
+<!-- find this -->
 <text x="16" y="48">skill issue</text>
 
-<!-- After -->
-<text x="16" y="48">i know what i'm doing</text>
+<!-- change it to whatever -->
+<text x="16" y="48">i know exactly what i'm doing</text>
 ```
 
-### Customizing colors
-
-Find `fill="#..."` attributes and swap them out:
+**5.** Adjust colors by finding `fill="#..."` values and swapping them:
 
 ```xml
-<!-- Change a color -->
-<text fill="#10B981">was green, now whatever you want</text>
-<rect fill="#1a1a2e"/>
+<text fill="#10B981">green text</text>
+<rect fill="#1e293b"/>
 ```
 
-### Customizing animations
-
-Find the `<style>` block inside the SVG and tweak `animation-duration`, `animation-delay`, etc.:
+**6.** Tweak animations by editing the `<style>` block:
 
 ```css
-.my-animation {
-  animation-duration: 3s;   /* slower = more chill */
-  animation-delay: 0.2s;
+.bar {
+  animation-duration: 2s;    /* slower */
+  animation-delay: 0.5s;     /* starts later */
 }
 ```
 
-### Sizing
-
-Adjust `viewBox` and `width`/`height` on the root `<svg>` tag:
+**7.** Resize by adjusting `viewBox`, `width`, and `height` on the root `<svg>` element:
 
 ```xml
 <svg viewBox="0 0 400 200" width="400" height="200">
 ```
+
+> **Pro tip:** Don't change just `width`/`height` without matching the `viewBox`. SVG scales the content to fit the viewBox — if you only change the outer dimensions, you'll stretch or squash the widget.
 
 ---
 
@@ -404,27 +241,52 @@ Adjust `viewBox` and `width`/`height` on the root `<svg>` tag:
 
 ```
 widget-templates/
-├── existential.svg          # Matrix rain + existential vibes
-├── github-stats.svg         # Terminal: mock GitHub stats
-├── joke.svg                 # Terminal: programming joke
-├── rain.svg                 # Terminal: ASCII rain animation
-├── skills.svg               # Terminal: skill progress bars
-├── status.svg               # Terminal: current status
-├── code-editor.svg          # VS Code-style Python editor
-├── file-explorer.svg        # macOS Finder-style explorer
-├── commit-history.svg       # GitHub-style commit graph
-├── contribution-graph.svg   # GitHub contribution grid
-├── weather.svg              # Animated weather widget
-├── music-player.svg         # Spotify-style player
-├── calendar.svg             # Monthly calendar
-├── system-monitor.svg       # CPU/RAM/disk/network stats
-├── time-zones.svg           # World clock
-├── network-activity.svg     # Network topology viz
-├── social-stats.svg         # Social media stats
-├── progress-tracker.svg     # Project progress bars
-├── inspiration-quote.svg    # Quotes with sparkles
-├── example-profile-README.md # Full example README layout
-└── README.md                # You are here
+│
+├── 🖤 existential.svg          # Matrix-style falling character columns
+├── 🖤 github-stats.svg         # Terminal window: mock GitHub stats
+├── 🖤 joke.svg                 # Terminal: two-part programming joke
+├── 🖤 rain.svg                 # ASCII rain, multiple falling streams
+├── 🖤 skills.svg               # Animated skill progress bars
+├── 🖤 status.svg               # Pulsing status indicator
+│
+├── 💻 code-editor.svg          # VS Code–style Python editor + cursor
+├── 📂 file-explorer.svg        # macOS Finder panel, slide animations
+│
+├── 🌿 commit-history.svg       # Git commit timeline with branch lines
+├── 🌿 contribution-graph.svg   # GitHub contribution grid
+│
+├── ☀️  weather.svg              # Animated sun, clouds, weather data
+├── 🎵 music-player.svg         # Equalizer bars, now-playing display
+├── 📅 calendar.svg             # Monthly calendar, today highlighted
+├── 💻 system-monitor.svg       # CPU/RAM/disk/network gauges
+├── 🌍 time-zones.svg           # World clock, multiple cities
+├── 🌐 network-activity.svg     # Network topology, animated packets
+│
+├── 👥 social-stats.svg         # Follower counts and growth percentages
+├── ✅ progress-tracker.svg     # Project milestones with checkmarks
+├── ✨ inspiration-quote.svg    # Quote with gradient shimmer
+│
+├── assets/                     # README diagrams and hero image
+│   ├── hero-banner.svg         # Project hero banner (820px)
+│   ├── architecture.svg        # Architecture diagram
+│   ├── data-flow.svg           # Data flow pipeline
+│   ├── capabilities.svg        # Feature/capability map
+│   └── stats.svg               # Performance stats dashboard
+│
+├── docs/wiki/                  # Detailed documentation
+│   ├── Home.md
+│   ├── Architecture.md         # Deep dive on SVG structure + animation
+│   ├── Installation.md
+│   ├── Usage.md
+│   ├── Privacy.md
+│   ├── Roadmap.md
+│   └── Troubleshooting.md
+│
+├── example-profile-README.md   # Full example profile layout using the widgets
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── CHANGELOG.md
+└── README.md                   # You are here
 ```
 
 ---
@@ -432,34 +294,7 @@ widget-templates/
 ## 📊 Performance Stats
 
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 200" width="740" height="200">
-  <rect width="740" height="200" rx="12" fill="#0d1117"/>
-  <text x="370" y="28" font-family="monospace" font-size="13" fill="#888" text-anchor="middle">// performance profile</text>
-
-  <rect x="20" y="44" width="160" height="120" rx="8" fill="#161b22" stroke="#F59E0B" stroke-width="1"/>
-  <text x="100" y="74" font-family="monospace" font-size="28" fill="#F59E0B" text-anchor="middle" font-weight="bold">&lt;10KB</text>
-  <text x="100" y="94" font-family="monospace" font-size="10" fill="#888" text-anchor="middle">per widget</text>
-  <text x="100" y="130" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">small enough to</text>
-  <text x="100" y="144" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">fit in a tweet (almost)</text>
-
-  <rect x="200" y="44" width="160" height="120" rx="8" fill="#161b22" stroke="#2563EB" stroke-width="1"/>
-  <text x="280" y="74" font-family="monospace" font-size="28" fill="#2563EB" text-anchor="middle" font-weight="bold">0ms</text>
-  <text x="280" y="94" font-family="monospace" font-size="10" fill="#888" text-anchor="middle">JS runtime</text>
-  <text x="280" y="130" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">CSS animations only.</text>
-  <text x="280" y="144" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">zero JS executed.</text>
-
-  <rect x="380" y="44" width="160" height="120" rx="8" fill="#161b22" stroke="#10B981" stroke-width="1"/>
-  <text x="460" y="74" font-family="monospace" font-size="28" fill="#10B981" text-anchor="middle" font-weight="bold">0</text>
-  <text x="460" y="94" font-family="monospace" font-size="10" fill="#888" text-anchor="middle">dependencies</text>
-  <text x="460" y="130" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">no node_modules.</text>
-  <text x="460" y="144" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">no supply chain anxiety.</text>
-
-  <rect x="560" y="44" width="160" height="120" rx="8" fill="#161b22" stroke="#a855f7" stroke-width="1"/>
-  <text x="640" y="74" font-family="monospace" font-size="28" fill="#a855f7" text-anchor="middle" font-weight="bold">20</text>
-  <text x="640" y="94" font-family="monospace" font-size="10" fill="#888" text-anchor="middle">widgets</text>
-  <text x="640" y="130" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">for every mood,</text>
-  <text x="640" y="144" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">aesthetic, and identity crisis.</text>
-</svg>
+  <img src="assets/stats.svg" alt="Performance stats dashboard showing 20 widgets, under 10KB per widget, 0ms JS runtime, 0 dependencies, and 100% browser compatibility" width="820" />
 </p>
 
 ---
@@ -468,33 +303,74 @@ widget-templates/
 
 These widgets are static files. They phone home to exactly **nobody**.
 
-- No analytics, no tracking pixels, no "we use cookies" banners
-- No API calls, no external CDN dependencies
-- No user data collected, stored, or sold to fund someone's Series A
-- The only network request is GitHub (or your web server) serving the `.svg` file itself
+- No analytics, no tracking pixels, no beacon requests
+- No external CDN dependencies inside any widget file
+- No user data collected, stored, processed, or sold
+- The only network request involved is your web server (or GitHub) serving the `.svg` file itself — a normal HTTP GET for a static asset
 
-The most private thing about these widgets is that they will never know who's looking at them. Philosophical, really.
+The widgets have no mechanism for tracking viewers because they have no mechanism for anything at runtime except playing CSS animations. That's a feature, not a limitation.
+
+See [docs/wiki/Privacy.md](docs/wiki/Privacy.md) for a full breakdown.
 
 ---
 
-## 🔭 Future Roadmap
+## 🔭 Roadmap
 
-*Things that would be cool to have (no promises, no Jira tickets):*
+**Theme variants**
+- [ ] Dark/light theme variants for all widgets (currently mixed)
+- [ ] Additional terminal themes: gruvbox, solarized, catppuccin
 
-- [ ] Dark/light theme variants for all widgets
-- [ ] More terminal widget themes (gruvbox, solarized, catppuccin)
-- [ ] Interactive SVG widgets with JavaScript (opt-in, clearly labeled)
-- [ ] More language support for `code-editor.svg` (JS, Rust, Go snippets)
-- [ ] A widget picker / preview tool (a simple HTML page in the repo)
-- [ ] Automated testing to catch broken SVG animations
-- [ ] GitHub Actions to auto-validate SVG syntax on PRs
-- [ ] A "random widget" showcase in the README
-- [ ] Accessibility improvements (ARIA labels, reduced-motion support)
+**New widget types**
+- [ ] Interactive SVG widgets with JavaScript (opt-in, clearly labeled as JS-required)
+- [ ] Additional language support in `code-editor.svg`: JavaScript, Rust, Go
+- [ ] Typing animation widget (text that types itself out)
+
+**Developer experience**
+- [ ] Widget picker / live preview tool (single HTML file in repo, no server)
+- [ ] GitHub Actions CI to auto-validate SVG syntax on PRs
+- [ ] Automated screenshot tests to catch broken animations
+
+**Accessibility**
+- [ ] `prefers-reduced-motion` support across all animated widgets
+- [ ] ARIA labels and `role` attributes for screen readers
+
+---
+
+## 📦 Packaging
+
+There's nothing to build. The `.svg` files in the repo root are the distributable. If you want to bundle them:
+
+```bash
+# Grab just the SVG files
+zip widgets.zip *.svg
+
+# Or copy to your own project
+cp existential.svg rain.svg skills.svg ~/my-project/
+```
+
+For automated workflows, the files are also accessible directly via GitHub's raw content URL:
+```
+https://raw.githubusercontent.com/Kaelith69/widget-templates/main/skills.svg
+```
+
+---
+
+## 🤝 Contributing
+
+Pull requests welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide — branching model, commit style, SVG guidelines, and the PR checklist.
+
+Short version: keep widgets self-contained, no external URLs, CSS animations only, under 10 KB.
+
+---
+
+## 🔐 Security
+
+To report a vulnerability, use the [GitHub Security Advisory](https://github.com/Kaelith69/widget-templates/security/advisories/new) — it's private and goes directly to the maintainer. See [SECURITY.md](SECURITY.md) for the full policy.
 
 ---
 
 ## 📄 License
 
-MIT — see [LICENSE](LICENSE) for the full legal monologue.
+MIT — see [LICENSE](LICENSE) for the full text.
 
-TL;DR: do whatever you want with these, just don't sue me.
+Built by [Kaelith69](https://github.com/Kaelith69).
